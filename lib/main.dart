@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'e-Med',
       theme: MyTheme.mytheme,
       onGenerateRoute: MyRoute.instace.myRoutes,
-      initialRoute: '/splash'
+      initialRoute: '/statecontroller'
     );});
   }
 }

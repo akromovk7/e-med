@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:med_app/core/base/base_view/size_extension.dart';
+import 'package:med_app/core/base/size_extension.dart';
 import 'package:med_app/core/components/button_styles.dart';
 import 'package:med_app/core/components/text_styles.dart';
 import 'package:med_app/core/constants/color_const.dart';
 import 'package:med_app/core/constants/font_const.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:med_app/screens/auth/cubit/auth_cubit.dart';
+import 'package:med_app/screens/auth/state/auth_state.dart';
 
 class InitialPage extends StatelessWidget {
   const InitialPage({Key? key}) : super(key: key);
@@ -51,7 +54,9 @@ class InitialPage extends StatelessWidget {
               child: Column(
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.read<AuthCubit>().changeState(AuthSignUP());
+                    },
                     child: Text(
                       "Get Started",
                       style: TextCustom.textDesign(
@@ -66,7 +71,7 @@ class InitialPage extends StatelessWidget {
                   ),
                   sizedBox(16),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {context.read<AuthCubit>().changeState(AuthSignIN());},
                     child: Text(
                       "Log in",
                       style: TextCustom.textDesign(

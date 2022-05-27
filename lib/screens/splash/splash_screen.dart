@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:med_app/core/constants/color_const.dart';
 
 class SplashScreenPage extends StatelessWidget {
@@ -10,11 +11,10 @@ class SplashScreenPage extends StatelessWidget {
       backgroundColor: ConsColors.kPrimaryColor,
       body: Center(
         child: SizedBox(
-          height: 47,
-          width: 150,
+          height: 47.h,
+          width: 150.w,
           child: Image.asset(
             "assets/images/e-medlogo.png",
-            fit: BoxFit.cover,
           ),
         ),
       ),
