@@ -7,7 +7,7 @@ class ButtonStyles {
     return ElevatedButton.styleFrom(
       onPrimary: onPrimary,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(RadiuConst.small)),
+            borderRadius: BorderRadius.circular(ConsRadius.small)),
         primary: backgroundcolor,
         side: BorderSide(color: borderColor),
         fixedSize: Size(width, height));

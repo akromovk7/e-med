@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:med_app/core/constants/color_const.dart';
 
 class MyTextField {
   static textField({
+    TextInputType? keyboardType,
     required String text,
     IconButton? iconButton,
     required TextEditingController controller,
     IconButton? phoneNumber,
     bool read = false,
+    List<MaskTextInputFormatter> formatter = const [],
     var onChanged,
     VoidCallback? onTap,
     FormFieldValidator<String>? validator,
-    bool isShown = false
+    bool isShown = false,
   }) {
     return TextFormField(
+      keyboardType: keyboardType,
+        inputFormatters: formatter,
         controller: controller,
         readOnly: read,
         onChanged: onChanged,
@@ -32,11 +37,11 @@ class MyTextField {
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15.0),
-            borderSide:  BorderSide(color: ConsColors.kBlack),
+            borderSide: BorderSide(color: ConsColors.kBlack),
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15.0),
-            borderSide:  BorderSide(color: ConsColors.kBlack),
+            borderSide: BorderSide(color: ConsColors.kBlack),
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15.0),

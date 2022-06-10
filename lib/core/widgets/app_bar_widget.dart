@@ -32,7 +32,7 @@ class AppBarWidget extends StatelessWidget {
                   ),
                   Text(
                     "Back",
-                    style: TextCustom.textDesign(),
+                    style: TextCustom.textDesign(color: ConsColors.kPrimaryColor),
                   ),
                 ],
               ),

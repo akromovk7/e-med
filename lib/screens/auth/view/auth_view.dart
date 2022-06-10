@@ -5,6 +5,8 @@ import 'package:med_app/screens/auth/cubit/auth_cubit.dart';
 import 'package:med_app/screens/auth/state/auth_state.dart';
 import 'package:med_app/screens/auth/view/confirmation_page.dart';
 import 'package:med_app/screens/auth/view/initial_page.dart';
+import 'package:med_app/screens/auth/view/login_page.dart';
+import 'package:med_app/screens/auth/view/personal_id_page.dart';
 import 'package:med_app/screens/auth/view/sign_up_page.dart';
 import 'package:med_app/screens/splash/splash_screen.dart';
 
@@ -31,8 +33,12 @@ class AuthView extends StatelessWidget {
                 return const InitialPage();
               } else if (state is AuthSignUP) {
                 return SignUpPage();
+              } else if (state is AuthSignIN) {
+                return LoginPage();
               } else if (state is AuthConfirmation) {
                 return const ConFirmationPage();
+              } else if (state is AuthId) {
+                return const PersonalIdPage();
               } else {
                 return Container();
               }

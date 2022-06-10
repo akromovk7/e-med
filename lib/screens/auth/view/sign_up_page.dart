@@ -80,7 +80,7 @@ class SignUpPage extends StatelessWidget {
                                 validator:
                                     ValidatorController.passwordValidator,
                                 iconButton: IconButton(
-                                    splashRadius: RadiuConst.small,
+                                    splashRadius: ConsRadius.small,
                                     onPressed: () {
                                       context.read<AuthCubit>().obSecure();
                                       setState(() {});
